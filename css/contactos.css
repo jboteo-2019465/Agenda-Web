@@ -1,0 +1,352 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #1f2029;
+}
+
+
+
+.icono{
+    max-width: 100%;
+}
+
+
+
+table {
+    max-width: 100%;
+}
+
+#color {
+    background-color: lightcoral;
+    color: lightcoral;
+    font-size: 1%;
+}
+
+.titulo {
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+}
+
+/*navBar*/
+#mainMenu {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightcoral;
+    transition: transform 0.3s;
+    transform: translateY(-100%);
+}
+
+#mainMenu--show {
+    transform: translateY(0);
+}
+
+.menuCheckBox:checked+#mainMenu {
+    transform: translateY(0);
+}
+
+.menuCheckBox {
+    display: none;
+}
+
+.menuIcono {
+    width: 40px;
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menuLink {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    #mainMenu {
+        flex-direction: row;
+    }
+
+}
+
+.menuItem {
+    padding: 1em;
+}
+
+/* Secciónes de contenido*/
+.home {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.partes {
+    flex: 1;
+    min-width: 250px;
+    font-family: 'Arimo', sans-serif;
+    margin-top: 200px;
+}
+
+.partes:first-child {
+    flex: 2;
+    padding: 25px;
+    background-color: #2a2b38;
+    margin: 20px;
+    margin-bottom: 0px;
+}
+
+.partes div {
+    padding: 25px;
+    margin: 20px;
+}
+
+/*En Linea*/
+.enLinea {
+    color: whitesmoke;
+    background-color: #1f2029;
+    border-top-color: white;
+    border-bottom-color: white;
+    
+    border-top: groove;
+    border-bottom: groove;
+    border-radius: 2%;
+}
+
+.enLinea li {
+    margin-bottom: 3%;
+    background-position-x: left;
+    position: relative;
+}
+
+.enLinea ul {
+    margin-top: 20px;
+    list-style: none;
+    color: white;
+}
+
+.enLinea img {
+    width: 20%;
+    float: right;
+    margin-top: -40px;
+}
+
+/*Tabla de Datos*/
+table {
+    width: 100%;
+}
+
+.headerFixed {
+    overflow: auto;
+    margin-top: -20%;
+}
+
+.headerFixed thead th {
+    position: sticky;
+    top: 0;
+    background-color: rgb(103, 154, 171);
+    color: black;
+    font-size: 15px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+}
+
+td img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: #1f2029;
+}
+
+tr:nth-child(odd) {
+    background-color: #2a2b38;
+}
+
+tr:hover td {
+    color: #b49244;
+    cursor: pointer;
+    background-color: #494242;
+}
+
+td a {
+    border: none;
+    padding: 7px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: #e6e7e8;
+    text-decoration: none;
+}
+
+#buttonAgregarContacto {
+    border: none;
+    padding: 7px 20px;
+    border-radius: 10%;
+    background-color: #2a2b38;
+    color: #e6e7e8;
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px #1f2029 groove;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+#buttonAgregarContacto:hover {
+    color: #ffeba7;
+    background-color: #5e6681;
+}
+
+
+
+/* --------------------------------- Agregar Contacto ------------------------------*/
+.form {
+    --input-focus: #2d8cf0;
+    --font-color: #1b1a1a;
+    --font-color-sub: #4a4949;
+    --bg-color: #ffeba7;
+    --main-color: black;
+    padding: 20px;
+    background: rgb(103, 154, 171);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+}
+
+.title {
+    color: var(--font-color);
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.title span {
+    color: var(--font-color-sub);
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.input {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+}
+
+.input:focus {
+    border: 2px solid var(--input-focus);
+}
+
+.login-with {
+    display: flex;
+    gap: 20px;
+}
+
+.button-log {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    color: var(--font-color);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--main-color);
+}
+
+.button-log:active,
+.button-confirm:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
+}
+
+.buttonConfirm {
+    margin: 50px auto 0 auto;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 17px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+/* ------------------------------------ Perfil del Contacto ------------------------------*/
+.usuario {
+    margin: 20px;
+    text-align: center;
+    color: white;
+    background-color: lightslategrey;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    
+    
+}
+
+.subTitulo {
+    color: #4a4949;
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Protest Riot', sans-serif;
+}
+
+.usuario img {
+    width: 10%;
+}
+
+.datos{
+    border-top: groove;
+    border-radius: 2%;
+}
+
+.usuario img{
+    height: 100%;
+    border-radius: 100%;
+}
+
+
